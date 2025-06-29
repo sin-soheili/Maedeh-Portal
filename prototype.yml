@@ -1,0 +1,44 @@
+project_name: university_portal
+structure:
+  - manage.py
+  - .env
+  - requirements.txt
+  - config/
+    - __init__.py
+    - asgi.py
+    - wsgi.py
+    - urls.py
+    - settings.py
+  - core/  # ابزارهای مشترک
+    - models.py
+    - utils.py
+    - validators.py
+  - accounts/  # ورود، ثبت‌نام، ویرایش پروفایل
+    - models.py
+    - views.py
+    - forms.py
+    - urls.py
+    - templates/accounts/
+  - dashboard/  # پنل کاربری
+    - views.py
+    - urls.py
+    - templates/dashboard/
+  - ticketing/  # ارسال تیکت به آموزش
+    - models.py
+    - views.py
+    - urls.py
+    - templates/ticketing/
+  - associations/  # عضویت در انجمن‌ها
+    - models.py
+    - views.py
+    - urls.py
+    - templates/associations/
+  - pages/  # صفحه‌های عمومی مثل درباره ما، تماس با ما
+    - views.py
+    - urls.py
+    - templates/pages/
+  - templates/
+    - shared/
+    - base.html
+  - static/
+  - media/
