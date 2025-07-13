@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import Association
 
-# Register your models here.
+
+@admin.register(Association)
+class AssociationAdmin(admin.ModelAdmin):
+    list_display = ("name", "created_at")
+    search_fields = ("name",)
